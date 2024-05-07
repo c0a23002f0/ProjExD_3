@@ -120,9 +120,10 @@ class Beam:
         """
         あとで
         """
-        self.img = pg.transform.rotozoom(pg.image.load("beam.png"), 0, 2.0)  # Beam画像Surface
+        self.img = pg.transform.rotozoom(pg.image.load("fig/beam.png"), 0, 2.0)  # Beam画像Surface
         self.rct: pg.Rect = self.img.get_rect()  # Beam画像Rect
         self.rct.left = bird.rct.right  # ビームの左座標をこうかとんの右座標を設定する
+        self.rct.centery = bird.rct.centery
         self.vx, self.vy = +5, 0
 
     def update(self, screen: pg.Surface):
