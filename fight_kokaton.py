@@ -138,7 +138,13 @@ class Beam:
 
 
 class Score:
+    """
+    スコアに関するクラス
+    """
     def __init__(self,sc):
+        """
+        スコア表示の設定
+        """
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         color = (0, 0, 255)
         score = 0
@@ -147,6 +153,9 @@ class Score:
         self.rct = (100, HEIGHT-50)
 
     def update(screen:pg.Surface, sco):
+        """
+        スコア表示の更新
+        """
         txt = Score(sco)
         screen.blit(txt, [100, HEIGHT-50])
 
